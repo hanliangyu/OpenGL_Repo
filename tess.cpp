@@ -36,10 +36,10 @@ int main(){
     }
 
     // Initialise ShaderManger
-    std::string vertexFile = "/Users/han/CLionProjects/OpenGl_Repo/shaders/tess_vs.vs.glsl";
-    std::string fragmentFile = "/Users/han/CLionProjects/OpenGl_Repo/shaders/tess_fs.fs.glsl";
-    std::string tcsFile = "/Users/han/CLionProjects/OpenGl_Repo/shaders/tess_control_shader.tcs.glsl";
-    std::string tesFile = "/Users/han/CLionProjects/OpenGl_Repo/shaders/tess_eval_shader.tes.glsl";
+    std::string vertexFile = "../shaders/tess_vs.vs.glsl";
+    std::string fragmentFile = "../shaders/tess_fs.fs.glsl";
+    std::string tcsFile = "../shaders/tess_control_shader.tcs.glsl";
+    std::string tesFile = "../shaders/tess_eval_shader.tes.glsl";
     ShaderManager shaderManager(vertexFile, fragmentFile, tcsFile, tesFile);
 
     // Configure the shaders

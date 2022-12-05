@@ -3,8 +3,6 @@
 
 layout (triangles, equal_spacing, ccw) in;
 
-in vec3 tcPosition[];
-
 vec3 interpolate(vec3 v0, vec3 v1, vec3 v2){
     return gl_TessCoord.x * v0 + gl_TessCoord.y * v1 + gl_TessCoord.z * v2;
 }
