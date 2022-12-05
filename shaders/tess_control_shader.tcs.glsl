@@ -5,11 +5,7 @@
 // this value controls the size of the input and output arrays
 layout (vertices=3) out;
 
-layout (location = 0) in float OL1;
-layout (location = 1) in float OL2;
-layout (location = 2) in float OL3;
-layout (location = 3) in float IL1;
-
+uniform vec4 TessLevelFactors;
 in vec3 vPosition[];
 out vec3 tcPosition[];
 
@@ -24,12 +20,12 @@ void main()
     // invocation zero controls tessellation levels for the entire patch
     if (gl_InvocationID == 0)
     {
-        gl_TessLevelOuter[0] = OL1;
-        gl_TessLevelOuter[1] = OL2;
-        gl_TessLevelOuter[2] = OL3;
+        gl_TessLevelOuter[0] = TessLevelFactors[0];
+        gl_TessLevelOuter[1] = TessLevelFactors[1];
+        gl_TessLevelOuter[2] = TessLevelFactors[2];
         gl_TessLevelOuter[3] = 1;
 
-        gl_TessLevelInner[0] = IL1;
-        gl_TessLevelInner[1] = IL1;
+        gl_TessLevelInner[0] = TessLevelFactors[3];
+        gl_TessLevelInner[1] = TessLevelFactors[3];
     }
 }

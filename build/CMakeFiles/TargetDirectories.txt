@@ -1,0 +1,9 @@
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/rebuild_cache.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/tess_triangle.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/edit_cache.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/texture.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/three_color_triangle.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/double_triangles.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/OpenGL_Demo.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/shader.dir
+/Users/han/CLionProjects/OpenGl_Repo/build/CMakeFiles/triangle.dir
