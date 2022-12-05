@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.18)
+project(OpenGL_Demo)
+
+set(CMAKE_CXX_STANDARD 17)
+
+find_package(glfw3 3.3 REQUIRED)
+find_package(OpenGL REQUIRED)
+
+include_directories(include)
+
+add_executable(OpenGL_Demo main.cpp glad.c src/windowManager.cpp)
+add_executable(triangle triangle_ref.cpp glad.c)
+add_executable(double_triangles double_triangles.cpp glad.c src/windowManager.cpp)
+add_executable(three_color_triangle three_color_triangle.cpp glad.c src/windowManager.cpp src/Shader.cpp)
+add_executable(shader src/Shader.cpp glad.c)
+add_executable(texture simple_texture.cpp src/Shader.cpp glad.c src/windowManager.cpp)
+add_executable(tess_triangle tess.cpp src/Shader.cpp src/glad.c src/windowManager.cpp)
+
+target_include_directories(OpenGL_Demo PUBLIC ./include)
+target_include_directories(triangle PUBLIC ./include)
+target_include_directories(double_triangles PUBLIC ./include)
+target_include_directories(three_color_triangle PUBLIC ./include)
+target_include_directories(texture PUBLIC ./include)
+target_include_directories(tess_triangle PUBLIC ./include)
+
+target_link_libraries(OpenGL_Demo glfw)
+target_link_libraries(OpenGL_Demo OpenGL::GL)
+target_link_libraries(triangle glfw)
+target_link_libraries(triangle OpenGL::GL)
+target_link_libraries(double_triangles glfw)
+target_link_libraries(double_triangles OpenGL::GL)
+target_link_libraries(three_color_triangle glfw)
+target_link_libraries(three_color_triangle OpenGL::GL)
+target_link_libraries(texture glfw)
+target_link_libraries(texture OpenGL::GL)
+target_link_libraries(tess_triangle glfw)
+target_link_libraries(tess_triangle OpenGL::GL)
